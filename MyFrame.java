@@ -1,7 +1,3 @@
-package Package0;
-
-//import sun.security.mscapi.KeyStore;
-
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
@@ -11,13 +7,9 @@ import java.util.Iterator;
 import java.util.Vector;
 import javax.swing.*;
 
-/**
- * Created by qybyl on 18/4/17.
- */
 public class MyFrame {
     private Frame f;
     private Panel p0,p10,p11;
-//    private TextField output0, output1;
     private TextArea  output0, output1;
     private String FrameTitle = "";
     private Button[] buttons;
@@ -25,7 +17,6 @@ public class MyFrame {
     private String outputString = "";
     private double calResult=0.0;
     private Vector<String> Formula = new Vector<>();
-//    private Vector<String> formulaProcessed = new Vector<>();
     private int ButtonNumber = 20;
     public static void main(String args[])throws Exception{
         MyFrame ff = new MyFrame();
@@ -46,7 +37,6 @@ public class MyFrame {
         f.setBackground(Color.cyan);
         f.setResizable(false);
         f.setLocation((displaySize.width - frameSize.width)/2, (displaySize.height - frameSize.height)/2  ); // 设置窗口居中显示器显示
-        f.setIconImage(f.getToolkit().getImage("./src/Package0/1.jpg"));
 
         f.addWindowListener(new WindowAdapter() {
             @Override
@@ -155,7 +145,6 @@ public class MyFrame {
                 super.mouseClicked(e);
                 inputString+=(buttons[1].getLabel());
                 output0.setText(inputString);
-//                Formula.add(1);
                 Formula.add(buttons[1].getLabel());
             }
         });
@@ -166,7 +155,6 @@ public class MyFrame {
                 super.mouseClicked(e);
                 inputString+=(buttons[2].getLabel());
                 output0.setText(inputString);
-//                Formula.add(2);
                 Formula.add(buttons[2].getLabel());
             }
         });
@@ -177,7 +165,6 @@ public class MyFrame {
                 super.mouseClicked(e);
                 inputString+=(buttons[3].getLabel());
                 output0.setText(inputString);
-//                Formula.add(3);
                 Formula.add(buttons[3].getLabel());
             }
         });
@@ -188,7 +175,6 @@ public class MyFrame {
                 super.mouseClicked(e);
                 inputString+=(buttons[4].getLabel());
                 output0.setText(inputString);
-//                Formula.add(4);
                 Formula.add(buttons[4].getLabel());
             }
         });
@@ -199,7 +185,6 @@ public class MyFrame {
                 super.mouseClicked(e);
                 inputString+=(buttons[5].getLabel());
                 output0.setText(inputString);
-//                Formula.add(5);
                 Formula.add(buttons[5].getLabel());
             }
         });
@@ -210,7 +195,6 @@ public class MyFrame {
                 super.mouseClicked(e);
                 inputString+=(buttons[6].getLabel());
                 output0.setText(inputString);
-//                Formula.add(6);
                 Formula.add(buttons[6].getLabel());
             }
         });
@@ -299,7 +283,6 @@ public class MyFrame {
             @Override
             public void mouseClicked(MouseEvent e) throws IndexOutOfBoundsException{
                 super.mouseClicked(e);
-//                String newInputString = "";
                 if(!inputString.isEmpty()){
                     inputString = inputString.substring(0,inputString.length()-1);
                 }
@@ -308,7 +291,6 @@ public class MyFrame {
                 if(!Formula.isEmpty()){
                     Formula.remove(Formula.size()-1);
                 }
-
             }
         });
 
@@ -431,7 +413,6 @@ public class MyFrame {
             while (itt.hasNext()){
                 String strr1 = (String)itt.next();
                 string1 += strr1;
-//                vector1 = null;
             }
             if(string1 != "")
                 formulaProcessed.add(string1);
